@@ -30,17 +30,22 @@ class HeightConversion:
         print("Your Height in Centimeters is: " + str(userinput) + "cm. Which is "+ str(userinput * 0.01) + " Meters\nYour height in Feet and Inches is: " + str(mathft) + " Ft " + str(mathinches) + " Inches.")
         MainMenu.MainMenuChoices()
     
+
+
     def FttoCm():
+        """"Example: 
+        Convert 2 feet + 3 inches to centimeters:
+        d(cm) = 2ft × 30.48 + 3in × 2.54 = 68.58cm"""
+
         inputstring = str(input("Enter your height in feet and inches: "))
         finalstring = ""
         for charcter in inputstring:
             if (charcter.isalnum()):
                 finalstring = finalstring + charcter
-        print(finalstring)
+        mathft = (int(finalstring[0]) * 30.48) + (int(finalstring[1:3]) * 2.54)
+        print("Your height in feet and inches is: " + str(inputstring) + "\nYour height in Centimeters is: " + str(mathft) + "Cm.")
 
-        
-
-        
+                
 class MainMenu:
     def MainMenuChoices():
         MenuInput = input("---------------------------------------------------------------\nChoose from one of the following options: \nPress K on your keyboard to convert Kilograms to Stone\nPress S on your keyboard to convert Stone to Kilograms\nPress C on your keyboard to convert centimeters to Feet and Inches\nPress F on your keyboard to convert Ft and Inches to Centimeters\nEnter your choice: ")
