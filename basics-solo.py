@@ -30,12 +30,20 @@ class HeightConversion:
         print("Your Height in Centimeters is: " + str(userinput) + "cm. Which is "+ str(userinput * 0.01) + " Meters\nYour height in Feet and Inches is: " + str(mathft) + " Ft " + str(mathinches) + " Inches.")
         MainMenu.MainMenuChoices()
     
-"""     def FttoCm():
-        userinput = ("Enter your height in feet and inches: ") """
+    def FttoCm():
+        inputstring = str(input("Enter your height in feet and inches: "))
+        finalstring = ""
+        for charcter in inputstring:
+            if (charcter.isalnum()):
+                finalstring = finalstring + charcter
+        print(finalstring)
+
+        
+
         
 class MainMenu:
     def MainMenuChoices():
-        MenuInput = input("---------------------------------------------------------------\nChoose from one of the following options: \nPress K on your keyboard to convert Kilograms to Stone\nPress S on your keyboard to convert Stone to Kilograms\nPress C on your keyboard to convert centimeters to Feet and Inches\nEnter your choice: ")
+        MenuInput = input("---------------------------------------------------------------\nChoose from one of the following options: \nPress K on your keyboard to convert Kilograms to Stone\nPress S on your keyboard to convert Stone to Kilograms\nPress C on your keyboard to convert centimeters to Feet and Inches\nPress F on your keyboard to convert Ft and Inches to Centimeters\nEnter your choice: ")
 
         if MenuInput == "k":
             WeightConversion.KiloToStone()
@@ -43,6 +51,8 @@ class MainMenu:
             WeightConversion.StoneToKilo()
         elif MenuInput == "c":
             HeightConversion.CmToFt()
+        elif MenuInput == "f":
+            HeightConversion.FttoCm()
         else:
             print("Invalid Choice! Please try again")
             MainMenu.MainMenuChoices()
