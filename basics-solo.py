@@ -27,7 +27,7 @@ class HeightConversion:
         mathft = int((userinput / 2.54) / 12)
         mathinches = int((userinput / 2.54) - (12 * mathft))
 
-        print("Your Height in Centimeters is: " + str(userinput) + "cm. Which is "+ str(userinput * 0.01) + " Meters\nYour height in Feet and Inches is: " + str(mathft) + " Ft " + str(mathinches) + " Inches.")
+        print("Your Height in Centimeters is: " + str(userinput) + "cm. Which is " + str(userinput * 0.01) + " Meters\nYour height in Feet and Inches is: " + str(mathft) + " Ft " + str(mathinches) + " Inches.")
         MainMenu.MainMenuChoices()
     
 
@@ -35,7 +35,8 @@ class HeightConversion:
     def FttoCm():
         """"Example: 
         Convert 2 feet + 3 inches to centimeters:
-        d(cm) = 2ft × 30.48 + 3in × 2.54 = 68.58cm"""
+        d(cm) = 2ft × 30.48 + 3in × 2.54 = 68.58cm
+        Code below is only for height below 10ft"""
 
         inputstring = str(input("Enter your height in feet and inches: "))
         finalstring = ""
